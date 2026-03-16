@@ -1,0 +1,21 @@
+{
+    "name": "ups-dashboard-backend",
+    "version": "1.0.0",
+    "description": "Backend API for UPS Asset Health Predictor Dashboard",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "node server.js",
+        "seed": "node seed.js"
+    },
+    "dependencies": {
+        "@google/generative-ai": "^0.24.1",
+        "@langchain/core": "^1.1.4",
+        "@langchain/google-genai": "^2.0.4",
+        "better-sqlite3": "^12.5.0",
+        "cors": "^2.8.5",
+        "dotenv": "^17.2.3",
+        "express": "^5.2.1",
+        "pdfkit": "^0.17.2"
+    }
+}

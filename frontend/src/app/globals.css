@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F8F9FA;
+  --foreground: #856133;
+
+  /* UPS Brand Colors */
+  --ups-brown: #662F12;
+  --ups-cream: #F5F5DC;
+  --ups-orange: #FF6600;
+
+  /* Neutrals */
+  --neutral-bg: #F8F9FA;
+  --neutral-text: #6C757D;
+  --neutral-heading: #212529;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-ups-brown: var(--ups-brown);
+  --color-ups-cream: var(--ups-cream);
+  --color-ups-orange: var(--ups-orange);
+  --color-neutral-bg: var(--neutral-bg);
+  --color-neutral-text: var(--neutral-text);
+  --color-neutral-heading: var(--neutral-heading);
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+:root.dark {
+  --background: #121212;
+  --foreground: #ffffff;
+  --neutral-bg: #1E1E1E;
+  --neutral-text: #A1A1AA;
+  --neutral-heading: #F4F4F5;
+  --ups-brown: #2A1810;
+  /* Lighter brown for dark mode specifically */
+  --ups-cream: #E5E5E5;
+  /* Light grey for text in dark mode */
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
